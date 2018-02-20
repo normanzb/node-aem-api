@@ -409,6 +409,9 @@ class AEM {
          ReadStream is prefered, as Buffers can mess up images
          */
         const stream = fs.createReadStream(file, { encoding: null });
+        stream.on('error', function (e) {
+          rej(e);
+        });
         /*
          Try and guess the mimetype
          */
@@ -505,6 +508,9 @@ class AEM {
          ReadStream is prefered, as Buffers can mess up images
          */
         const stream = fs.createReadStream(file, {encoding});
+        stream.on('error', function (e) {
+          rej(e);
+        });
         /*
          Try and guess the mimetype
          */
