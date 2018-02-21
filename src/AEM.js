@@ -417,7 +417,7 @@ class AEM {
          */
         mimeType = mime.lookup(file) || mimeType;
 
-        this.createAsset(path, stream, mimeType)
+        return this.createAsset(path, stream, mimeType)
           .then(res, rej);
       })
     } else if (file instanceof Buffer || file instanceof fs.ReadStream) {
@@ -517,7 +517,7 @@ class AEM {
          */
         mimeType = mime.lookup(file) || mimeType;
 
-        this.updateFile(path, stream, encoding, mimeType, createMode)
+        return this.updateFile(path, stream, encoding, mimeType, createMode)
           .then(res, rej);
       })
     } else if (file instanceof Buffer || file instanceof fs.ReadStream) {
