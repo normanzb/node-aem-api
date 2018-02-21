@@ -6,7 +6,7 @@
   "dependencies": {
     "es6-promise": "^3.2.1",
     "form-data": "^1.0.0-rc4",
-    "isomorphic-fetch": "^git+https://github.com/normanzb/isomorphic-fetch.git#v2.2.2",
+    "isomorphic-fetch": "git+https://github.com/normanzb/isomorphic-fetch.git#v2.2.2",
     "mime-types": "^2.1.11"
   },
   "devDependencies": {
